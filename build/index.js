@@ -31,7 +31,7 @@ app.use((req, res, next) => {
 });
 app.use('/', _api2.default);
 
-http.createServer(app).listen(8081);
+http.createServer(app).listen(process.env.PORT || 8081);
 console.log("server ready");
 //https.createServer(certOptions, app).listen(443);
 // app.listen(process.env.PORT || 8082);
