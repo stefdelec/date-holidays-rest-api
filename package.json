@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "start:watch": "nodemon output/index.js",
-    "babel:watch": "babel ./src --presets es2015 --watch --out-dir output",
+    "start": "npm run build && node ./build/index.js",
+    "build": "babel -d ./build ./src -s",
+    "build:watch": "babel -d ./build ./src -s -w ",
+    "start:watch": "nodemon build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,6 +19,7 @@
     "express": "^4.16.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
   }
 }

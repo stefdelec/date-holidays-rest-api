@@ -27,8 +27,7 @@ app.use((req, res, next) => {
 app.use('/', routes);
 
 
-
-
 http.createServer(app).listen(8081);
+console.log("server ready")
 //https.createServer(certOptions, app).listen(443);
 // app.listen(process.env.PORT || 8082);
